@@ -41,10 +41,9 @@ Passengers 0
 //RotatedPassengerOffset 1 -10 0 0
 BarrelPosition 0 20 0
 //Secondary gun
-AddGun 8 34 8 turret mg42
 //Delays are in ticks or 1/20ths of seconds
-ShootDelay 1
-ShellDelay 110
+ShootDelay 2
+ShellDelay 150
 //Sounds
 StartSound Engine
 StartSoundLength 20
@@ -56,15 +55,15 @@ ShellSound TankShell
 //Each section of the plane may have many parts
 //The sections are tailWheel, tail, bay, topWing, leftWingWheel, leftWing, rightWingWheel,
 //rightWing, nose, turret, coreWheel, core
-AddRecipeParts turret 1 tankTurret 1 vehicleSeat
-AddRecipeParts core 1 tankBody 1 vehicleSeat
-AddRecipeParts leftTrack 1 catTrack
-AddRecipeParts rightTrack 1 catTrack
+AddRecipeParts turret 1 tankBarrel
+AddRecipeParts core 1 vehicleSeat 2 iron
+AddRecipeParts leftTrack 1 wheel
+AddRecipeParts rightTrack 1 wheel
 //Dye colours are "black", "red", "green", "brown", "blue", "purple", "cyan", "silver", "gray", "pink", "lime", "yellow", "lightBlue", "magenta", "orange", "white"
-AddDye 10 gray
+AddDye 5 gray
 //Health and collision
-SetupPart core 500 -40 -8 -20 80 36 40
-SetupPart turret 400 -16 28 -16 32 12 32
-SetupPart leftTrack 200 -40 -8 -24 80 20 4
-SetupPart rightTrack 200 -40 -8 20 80 20 4
+SetupPart core 200 -40 -8 -20 80 36 40
+SetupPart turret 120 -16 28 -16 32 12 32
+SetupPart leftTrack 50 -40 -8 -24 80 20 4
+SetupPart rightTrack 50 -40 -8 20 80 20 4
 BulletDetection 7
