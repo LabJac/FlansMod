@@ -400,7 +400,7 @@ public class ModelChurchill extends ModelVehicle
 		rightTrackModel[21].setRotationPoint(46F, 13F, -16F);
 
 
-		translateAll(0F, -13F, 0F);
+		translateAll(0F, -5F, 0F);
 
 
 		flipAll();
