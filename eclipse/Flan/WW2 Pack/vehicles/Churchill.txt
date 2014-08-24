@@ -9,11 +9,11 @@ Texture Churchill
 //Third Person Camera Distance
 CameraDistance 7.5
 //Throttle
-MaxThrottle 0.8
-MaxNegativeThrottle 0.4
+MaxThrottle 0.4
+MaxNegativeThrottle 0.2
 //Steering modifiers
-TurnLeftSpeed 1.4
-TurnRightSpeed 1.4
+TurnLeftSpeed 0.6
+TurnRightSpeed 0.6
 //For calculating whether wheels are on the ground or not for driving
 WheelRadius 1.0
 //Wheel positions for collision handling. Tanks still have 4 wheels, they are just the corner ones.
@@ -32,38 +32,39 @@ Tank true
 FuelTankSize 2000
 //Inventory Slots
 CargoSlots 0
-ShellSlots 5
+ShellSlots 7
 //Driver and passenger positions
-Driver 0 43 0 -360 360 0 45
+Driver 0 20 0 -360 360 -5 45
 RotatedDriverOffset -12 0 0
 Passengers 1
-Passenger 1 0 34 0 turret -360 360 -15 60 mg42 MG42
-BarrelPosition 0 34 0
+Passenger 1 0 34 0 turret -360 360 -15 60 bren MG42
+BarrelPosition 0 20 0
 //Secondary gun
-AddGun 8 34 8 turret mg42
+AddGun 8 34 8 turret bren
 //Delays are in ticks or 1/20ths of seconds
-ShootDelay 1
-ShellDelay 110
+ShootDelay 2
+ShellDelay 150
 //Sounds
 StartSound Engine
 StartSoundLength 20
 EngineSound Engine
 EngineSoundLength 20
-ShootSound MG42Shoot
+ShootSound BrenShoot
 ShellSound TankShell
 //Recipe
 //Each section of the plane may have many parts
 //The sections are tailWheel, tail, bay, topWing, leftWingWheel, leftWing, rightWingWheel,
 //rightWing, nose, turret, coreWheel, core
 AddRecipeParts turret 1 tankTurret 1 vehicleSeat
-AddRecipeParts core 1 tankBody 1 vehicleSeat
-AddRecipeParts leftTrack 1 catTrack
-AddRecipeParts rightTrack 1 catTrack
+AddRecipeParts core 1 tankBody 1 vehicleSeat 8 iron
+AddRecipeParts leftTrack 1 catTrack 2 iron
+AddRecipeParts rightTrack 1 catTrack 2 iron
 //Dye colours are "black", "red", "green", "brown", "blue", "purple", "cyan", "silver", "gray", "pink", "lime", "yellow", "lightBlue", "magenta", "orange", "white"
-AddDye 10 gray
+AddDye 15 green
 //Health and collision
-SetupPart leftTrack 200 -66 6 16 142 17 14
-SetupPart rightTrack 200 -66 6 -30 142 17 14
-SetupPart core 500 -70 -13 -33 149 24 64
-SetupPart turret 200 -23 33 -16 43 22 32
+SetupPart leftTrack 300 -66 6 -30 142 17 14
+SetupPart rightTrack 300 -66 6 16 142 17 14
+SetupPart core 850 -70 -13 -33 149 24 64
+SetupPart turret 500 -23 33 -16 43 22 32
 BulletDetection 7
+ModelScale 0.75
