@@ -10,10 +10,10 @@ Texture Sherman
 CameraDistance 7.5
 //Throttle
 MaxThrottle 0.8
-MaxNegativeThrottle 0.4
+MaxNegativeThrottle 0.3
 //Steering modifiers
-TurnLeftSpeed 1.4
-TurnRightSpeed 1.4
+TurnLeftSpeed 0.8
+TurnRightSpeed 0.8
 //For calculating whether wheels are on the ground or not for driving
 WheelRadius 1.0
 //Wheel positions for collision handling. Tanks still have 4 wheels, they are just the corner ones.
@@ -24,6 +24,11 @@ WheelPosition 3 32 -8 -18
 WheelSpringStrength 0.5
 //Bouncy bouncy
 Bounciness 0.3
+Drag 1.0
+//Mass (In tons)
+Mass 1.0
+//Moment of Inertia (in crazy units. Just fiddle with this until you find something nice)
+MomentOfInertia 10.0
 //If true, then all wheels will apply drive forces
 FourWheelDrive true
 //Tank mode activate
@@ -34,7 +39,7 @@ FuelTankSize 2000
 CargoSlots 0
 ShellSlots 5
 //Driver and passenger positions
-Driver 0 17 0 -360 360 -4 4
+Driver 0 14 0 -360 360 -4 4
 RotatedDriverOffset 14 0 -9
 //Secondary gun
 AddGun 8 34 8 turret browning
@@ -56,14 +61,15 @@ ShellSound TankShell
 //The sections are tailWheel, tail, bay, topWing, leftWingWheel, leftWing, rightWingWheel,
 //rightWing, nose, turret, coreWheel, core
 AddRecipeParts turret 1 tankTurret 1 vehicleSeat
-AddRecipeParts core 1 tankBody 1 vehicleSeat
+AddRecipeParts core 1 tankBody 1 vehicleSeat 5 iron
 AddRecipeParts leftTrack 1 catTrack
 AddRecipeParts rightTrack 1 catTrack
 //Dye colours are "black", "red", "green", "brown", "blue", "purple", "cyan", "silver", "gray", "pink", "lime", "yellow", "lightBlue", "magenta", "orange", "white"
 AddDye 10 green
 //Health and collision
-SetupPart core 100 -55 -3 -19 108 29 38
-SetupPart turret 100 -15 27 -19 39 17 38
-SetupPart leftTrack 100 -54 -12 -27 104 21 10
-SetupPart rightTrack 100 -54 -12 16 104 21 10
+SetupPart core 520 -55 -3 -19 108 29 38
+SetupPart turret 450 -15 27 -19 39 17 38
+SetupPart leftTrack 200 -54 -12 16 104 21 10
+SetupPart rightTrack 200 -54 -12 -26 104 21 10
 BulletDetection 7
+ModelScale 0.9
