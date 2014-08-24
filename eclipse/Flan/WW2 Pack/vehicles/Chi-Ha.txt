@@ -9,11 +9,11 @@ Texture ChiHa
 //Third Person Camera Distance
 CameraDistance 7.5
 //Throttle
-MaxThrottle 0.8
-MaxNegativeThrottle 0.4
+MaxThrottle 1.2
+MaxNegativeThrottle 0.6
 //Steering modifiers
-TurnLeftSpeed 1.4
-TurnRightSpeed 1.4
+TurnLeftSpeed 0.95
+TurnRightSpeed 0.95
 //For calculating whether wheels are on the ground or not for driving
 WheelRadius 1.0
 //Wheel positions for collision handling. Tanks still have 4 wheels, they are just the corner ones.
@@ -32,18 +32,18 @@ Tank true
 FuelTankSize 2000
 //Inventory Slots
 CargoSlots 0
-ShellSlots 5
+ShellSlots 3
 //Driver and passenger positions
-Driver 0 14 0 -360 360 -3 3.5
+Driver 0 14 0 -360 360 -4 5
 RotatedDriverOffset 5 0 1
-Passengers 1
-Passenger 1 10 28 0 turret -360 360 -15 60 mg42 MG42
+Passengers 0
+//Passenger 1 10 28 0 turret -360 360 -15 60 mg42 MG42
 RotatedPassengerOffset 1 0 0 0
 BarrelPosition 0 34 0
 //Secondary gun
-AddGun 8 34 8 turret mg42
+AddGun 8 34 8 turret type99
 //Delays are in ticks or 1/20ths of seconds
-ShootDelay 1
+ShootDelay 2
 ShellDelay 110
 //Sounds
 StartSound Engine
@@ -61,10 +61,11 @@ AddRecipeParts core 1 tankBody 1 vehicleSeat
 AddRecipeParts leftTrack 1 catTrack
 AddRecipeParts rightTrack 1 catTrack
 //Dye colours are "black", "red", "green", "brown", "blue", "purple", "cyan", "silver", "gray", "pink", "lime", "yellow", "lightBlue", "magenta", "orange", "white"
-AddDye 10 gray
+AddDye 8 green
 //Health and collision
-SetupPart leftTrack 100 -47 -11 -27 105 20 9
-SetupPart rightTrack 100 -47 -11 17 105 20 9
-SetupPart turret 100 -24 21 -22 45 18 45
-SetupPart core 100 -45 -6 -18 102 27 36
+SetupPart leftTrack 180 -47 -11 17 105 20 9
+SetupPart rightTrack 180 -47 -11 -27 105 20 9
+SetupPart turret 200 -24 21 -22 45 18 45
+SetupPart core 300 -45 -6 -18 102 27 36
 BulletDetection 7
+ModelScale 0.95
